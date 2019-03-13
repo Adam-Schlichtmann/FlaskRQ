@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+</head>
+<body>
+    <h1>
+        Hello Enter a list size
+    </h1>
+
+    <form action="handle_data" method="post">
+        <input type="'text" placeholder="#####" name="number" id="number">
+        <input type="submit" value="Submit">
+    </form>
+
+    <form action="check_single" method="post">
+        <input type="text" name="id" placeholder="10000">
+        <input type="submit" name="singleStatus" value="Check Status">
+    </form>
+
+    <form action="cancel" method="post">
+        <input type="text" name="id" placeholder="10000">
+        <input type="submit" name="cancel" value="Cancel Job">
+    </form>
+
+    <form action="results" method="post">
+        <input type="text" name="id" placeholder="10000">
+        <input type="submit" name="results" value="Results">
+    </form>
+
+    <h2>{{value}}</h2>
+
+</body>
+</html>
