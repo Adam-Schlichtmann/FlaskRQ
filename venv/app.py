@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 from RQ import add_job, check_results, check_status, cancel_job, print_all_jobs
-
+from SimpleToken import id2token
 
 app = Flask(__name__)
 

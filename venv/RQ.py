@@ -25,7 +25,7 @@ def print_all_jobs():
 
 
 def add_job(list_size, id):
-    job = q.enqueue(cocktailSort, make_list(list_size), job_id=id)
+    job = q.enqueue(cocktailSort, [make_list(list_size), [1,2,3,4]], job_id=id)
     if job is not None:
         print("New Job Added, Status: {}".format(job.status))
     else:

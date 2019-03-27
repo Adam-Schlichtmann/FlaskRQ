@@ -2,7 +2,8 @@ import random
 import math
 
 
-def cocktailSort(items):
+def cocktailSort(items, asdf):
+    print(asdf)
     comparisons = 0
     swaps = 0
     top = len(items)
@@ -32,6 +33,33 @@ def cocktailSort(items):
             break
     #print "Comparisons: {} \nSwaps: {}".format(comparisons, swaps)
     return items
+
+
+def mergeSort(values):
+    result = []
+    if len(values) <= 1:
+        return values
+    else:
+        front = mergeSort(values[:len(values)//2])
+        back = mergeSort(values[len(values)//2:])
+        x = 0
+        j = 0
+    while x < len(front) and j < len(back):
+        if front[x] <= back[j]:
+            result.append(front[x])
+            x += 1
+        else:
+            result.append(back[j])
+            j += 1
+    if x < len(front):
+        while x < len(front):
+            result.append(front[x])
+            x += 1
+    if j < len(back):
+        while j < len(back):
+            result.append(back[j])
+            j += 1
+    return result
 
 
 def newSort(numbers):
